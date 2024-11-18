@@ -1,0 +1,16 @@
+{
+  "name": "mariadb-connection-pool",
+  "version": "1.0.0",
+  "description": "Node.js application demonstrating MariaDB connection pooling with advanced console methods.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mariadb": "^2.5.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
