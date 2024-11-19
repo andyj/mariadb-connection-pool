@@ -11,7 +11,7 @@ app.get('/data', async (req, res) => {
     conn = await pool.getConnection();
     console.assert(conn, 'Failed to obtain a database connection');
 
-    const rows = await conn.query('SELECT * FROM my_table');
+    const rows = await conn.query('SELECT current_timestamp()');
     console.table(rows);
 
     res.json(rows);
