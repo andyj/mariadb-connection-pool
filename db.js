@@ -1,11 +1,15 @@
+// db.js
+require('dotenv').config(); // Load environment variables
+
 const mariadb = require('mariadb');
 
 const pool = mariadb.createPool({
-  host: 'localhost',      // Change to your database host
-  user: 'db_user',        // Your database user
-  password: 'db_password',// Your database password
-  database: 'my_database',// Your database name
-  connectionLimit: 10     // Maximum number of connections in the pool
+  host: process.env.DB_HOST,         // Use DB_HOST environment variable from .env
+  user: process.env.DB_USER,         // Use DB_USER environment variable from .env
+  password: process.env.DB_PASSWORD, // Use DB_PASSWORD environment variable from .env
+  database: process.env.DB_NAME,     // Use DB_NAME environment variable from .env
+  port: process.env.DB_PORT,     // Use DB_PORT environment variable from .env
+  connectionLimit: 10                // Maximum number of connections in the pool
 });
 
 module.exports = pool;
