@@ -1,5 +1,5 @@
 
-# mariadb-connection-pool
+# Mariadb Connection Pools In Node
 ## Optimizing MariaDB Performance in Node.js Applications
 
 Read the full post here:
